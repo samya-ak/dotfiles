@@ -1,3 +1,4 @@
+runtime ./plug.vim
 if !exists('g:vscode')
   " Fundamentals "{{{
   " ---------------------------------------------------------------------
@@ -112,7 +113,7 @@ if !exists('g:vscode')
 
   " Imports "{{{
   " ---------------------------------------------------------------------
-  runtime ./plug.vim
+
   if has("unix")
     let s:uname = system("uname -s")
     " Do Mac stuff
@@ -153,6 +154,7 @@ if !exists('g:vscode')
 
   " vim: set foldmethod=marker foldlevel=0:
 else
+
   function! s:split(...) abort
     let direction = a:1
     let file = a:2

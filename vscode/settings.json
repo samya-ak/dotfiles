@@ -1,4 +1,6 @@
 {
+  "workbench.editor.showTabs": true,
+  "workbench.list.automaticKeyboardNavigation": false,
   "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
   "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.config/nvim/init.vim",
@@ -610,7 +612,7 @@
     "javascript": "javascriptreact"
   },
   "editor.cursorStyle": "line",
-  "editor.lineNumbers": "on",
+  "editor.lineNumbers": "relative",
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.wordWrap": "off",
   "[jsonc]": {
