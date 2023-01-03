@@ -1,0 +1,9 @@
+[time]
+disabled = false
+time_format = "%H:%M"
+utc_time_offset = "local"
+
+[character]
+format = "❯❯ "
+success_symbol = "❯❯(bold green) "
+error_symbol = "❯❯(bold red) "
