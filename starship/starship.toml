@@ -3,7 +3,38 @@ disabled = false
 time_format = "%H:%M"
 utc_time_offset = "local"
 
+[battery]
+full_symbol = " "
+charging_symbol = " "
+discharging_symbol = " "
+
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
+[[battery.display]]
+threshold = 30
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
 [character]
 format = "❯❯ "
 success_symbol = "❯❯(bold green) "
 error_symbol = "❯❯(bold red) "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[aws]
+symbol = " "
+
+
