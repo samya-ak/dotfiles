@@ -5,13 +5,10 @@ return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
 	use("christoomey/vim-tmux-navigator")
-	use({
-		"EdenEast/nightfox.nvim",
-		as = "nightfox",
-		config = function()
-			vim.cmd("colorscheme nightfox")
-		end,
-	})
+
+	-- theme
+	use("navarasu/onedark.nvim")
+
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 	-- `live-grep` finder will not function without [BurntSushi/ripgrep]
 	-- Install [sharkdp/fd] for extended capabilities
@@ -64,13 +61,10 @@ return require("packer").startup(function(use)
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
 	-- git integration
+	use("tpope/vim-fugitive")
+	use("tpope/vim-rhubarb")
 	-- show line modifications on left hand side
-	use({
-		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("gitsigns").setup()
-		end,
-	})
+	use("lewis6991/gitsigns.nvim")
 
 	use({
 		"numToStr/Comment.nvim",

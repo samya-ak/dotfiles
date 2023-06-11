@@ -26,7 +26,7 @@ keymap("x", "<leader>p", [["_dP]])
 keymap("n", "x", '"_x')
 
 -- copy stuff in your systems clipboard
-keymap({"n", "v"}, "<leader>y", [["+y]])
+keymap({ "n", "v" }, "<leader>y", [["+y]])
 keymap("n", "<leader>Y", [["+Y]])
 
 -- switch between projects
@@ -62,3 +62,6 @@ keymap("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 keymap("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
+
+-- clear all opened buffers
+keymap("n", "<leader>q", ":bufdo bwipeout<CR>")
