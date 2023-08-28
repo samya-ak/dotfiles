@@ -8,19 +8,25 @@ vim.opt.termguicolors = true
 -- empty setup using defaults
 local setup, nvimtree = pcall(require, "nvim-tree")
 if not setup then
-  return
+	return
 end
 nvimtree.setup({
--- disable window_picker for
--- explorer to work well with
--- window splits
-actions = {
-    open_file = {
-        window_picker = {
-            enable = false,
-        },
-    },
-},
+	-- disable window_picker for
+	-- explorer to work well with
+	-- window splits
+	actions = {
+		open_file = {
+			window_picker = {
+				enable = false,
+			},
+		},
+	},
+	filters = {
+		dotfiles = false,
+	},
+	diagnostics = {
+		enable = true,
+	},
 })
 
 local keymap = vim.keymap.set

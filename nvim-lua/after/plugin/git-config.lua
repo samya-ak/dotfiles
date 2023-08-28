@@ -4,6 +4,9 @@ if not status_ok then
 end
 
 gitsigns.setup({
+	current_line_blame_opts = {
+		delay = 0,
+	},
 	on_attach = function(bufnr)
 		local gs = package.loaded.gitsigns
 
