@@ -92,4 +92,12 @@ return require("packer").startup(function(use)
 			require("bufferline").setup()
 		end,
 	})
+
+	-- markdown preview
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
 end)
