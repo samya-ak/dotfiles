@@ -2,54 +2,23 @@
 alias li="exa -l -g --icons"
 alias lli="ll -a"
 alias mux=tmuxinator
-alias aws-sso-logout='aws-sso-util logout'
 alias vim=nvim
-
-export EDITOR='nvim'
-
-export AWS_PROFILE=sputnik-staging
-export AWS_REGION=us-east-1
-export ENV_LABEL=dev
-export ENV_TYPE=nonproduction
-
-export GONOPROXY=github.com/[!cloudfactory]/*
-export GOPRIVATE=github.com/cloudfactory
-export GOPROXY=$(aws ssm get-parameter --name "/oauth_tokens/jfrog/goproxy" --query "Parameter.Value" --output text --profile sputnik-staging)
-export GONOSUMDB="github.com/cloudfactory"
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-export JFROG_AUTH_TOKEN=
-export JFROG_AUTH_EMAIL=
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$GOPATH/bin
-export GO111MODULE=auto
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-export PATH=$PATH:/usr/local/sbin
-export PATH=$PATH:/usr/local/opt/mongodb-community@4.4/bin
-export NODE_TLS_REJECT_UNAUTHORIZED=0 meteor
-
-# Created by `pipx` on 2021-12-02 10:38:26
-export PATH="$PATH:/Users/samyakmaharjan/.local/bin"
-
-
-source ~/.utils/get_bearer_token.sh
-
+export PATH="$PATH:/usr/local/protobuf/bin"
+export EDITOR='nvim'
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$GOPATH/bin
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -111,6 +80,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -139,8 +109,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 eval "$(starship init zsh)"
-plugins=( 
-    git
-    zsh-autosuggestions
-)
+
+
+[[ -s "/Users/samyak/.gvm/scripts/gvm" ]] && source "/Users/samyak/.gvm/scripts/gvm"
+source ~/perl5/perlbrew/etc/bashrc
