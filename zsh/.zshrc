@@ -115,7 +115,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(starship init zsh)"
-
+eval "$(fzf --zsh)"
 
 [[ -s "/Users/samyak/.gvm/scripts/gvm" ]] && source "/Users/samyak/.gvm/scripts/gvm"
 source ~/perl5/perlbrew/etc/bashrc
