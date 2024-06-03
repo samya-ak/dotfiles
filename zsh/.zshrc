@@ -119,3 +119,6 @@ eval "$(fzf --zsh)"
 
 [[ -s "/Users/samyak/.gvm/scripts/gvm" ]] && source "/Users/samyak/.gvm/scripts/gvm"
 source ~/perl5/perlbrew/etc/bashrc
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

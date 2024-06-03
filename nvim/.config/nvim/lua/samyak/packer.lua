@@ -15,7 +15,7 @@ return require("packer").startup(function(use)
 	-- use homebrew to install these in mac
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.x",
+		tag = "0.1.6",
 		-- or                            , branch = '0.1.x',
 		requires = {
 			{ "nvim-lua/plenary.nvim" },
@@ -39,7 +39,7 @@ return require("packer").startup(function(use)
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+	use({ "nvimdev/lspsaga.nvim", after = "nvim-lspconfig" }) -- enhanced lsp uis
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
@@ -86,10 +86,9 @@ return require("packer").startup(function(use)
 	-- buffer line aka tabs
 	use({
 		"akinsho/bufferline.nvim",
-		tag = "v3.*",
 		requires = "nvim-tree/nvim-web-devicons",
 		config = function()
-			require("bufferline").setup()
+			require("bufferline").setup({})
 		end,
 	})
 

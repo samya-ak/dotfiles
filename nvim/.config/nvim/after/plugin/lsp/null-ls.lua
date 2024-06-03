@@ -17,9 +17,11 @@ null_ls.setup({
 	sources = {
 		--  to disable file types use
 		--  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
+		-- autoformat on save seems to work only for the builtin formatters
 		formatting.prettier, -- js/ts formatter
 		formatting.stylua, -- lua formatter
-		formatting.gofmt,
+		formatting.gofmt, -- go formatter
+		formatting.astyle, -- c, c++, java, c# etc. formatter
 		diagnostics.eslint_d.with({
 			-- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
@@ -36,13 +38,16 @@ null_ls.setup({
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
-					vim.lsp.buf.format({
-						filter = function(client)
-							--  only use null-ls for formatting instead of lsp server
-							return client.name == "null-ls"
-						end,
-						bufnr = bufnr,
-					})
+					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+					-- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
+					vim.lsp.buf.format({ async = false })
+					-- vim.lsp.buf.format({
+					-- 	filter = function(client)
+					-- 		--  only use null-ls for formatting instead of lsp server
+					-- 		return client.name == "null-ls"
+					-- 	end,
+					-- 	bufnr = bufnr,
+					-- })
 				end,
 			})
 		end
