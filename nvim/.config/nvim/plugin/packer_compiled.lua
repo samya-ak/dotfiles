@@ -154,7 +154,7 @@ _G.packer_plugins = {
     url = "https://github.com/jayp0521/mason-null-ls.nvim"
   },
   ["mason-nvim-dap.nvim"] = {
-    config = { "\27LJ\2\n¢\3\0\1\n\0\r\0\0266\1\0\0'\3\1\0B\1\2\0029\2\2\0015\3\4\0005\4\5\0=\4\6\3=\3\3\0026\2\a\0005\4\b\0B\2\2\4X\5\5Ä9\a\t\0014\b\3\0005\t\n\0>\t\1\b<\b\6\aE\5\3\3R\5˘\1276\2\0\0'\4\v\0B\2\2\0029\2\f\2\18\4\0\0B\2\2\1K\0\1\0\18default_setup\19mason-nvim-dap\1\0\6\tname\16Launch file\bcwd\23${workspaceFolder}\22runtimeExecutable\tnode\ttype\rpwa-node\frequest\vlaunch\fprogram\f${file}\19configurations\1\3\0\0\15typescript\15javascript\vipairs\15executable\1\0\1\fcommand\21js-debug-adapter\1\0\4\15executable\0\thost\014127.0.0.1\tport\3ª?\ttype\vserver\rpwa-node\radapters\bdap\frequireÎ\3\1\0\5\0\17\0\0306\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\3\0003\4\4\0>\4\1\3=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0\18\1\0\0'\3\t\0005\4\n\0B\1\3\1\18\1\0\0'\3\v\0005\4\f\0B\1\3\1\18\1\0\0'\3\r\0005\4\14\0B\1\3\1\18\1\0\0'\3\15\0005\4\16\0B\1\3\1K\0\1\0\1\0\4\nnumhl\5\ttext\nÛ∞Åï \vlinehl\19DapStoppedLine\vtexthl\19DiagnosticWarn\15DapStopped\1\0\4\nnumhl\5\ttext\b‚óÜ\vlinehl\5\vtexthl\16DapLogPoint\16DapLogPoint\1\0\4\nnumhl\5\ttext\b‚óè\vlinehl\5\vtexthl\27DapBreakpointCondition\27DapBreakpointCondition\1\0\4\nnumhl\5\ttext\b‚óè\vlinehl\5\vtexthl\18DapBreakpoint\18DapBreakpoint\16sign_define\afn\bvim\rhandlers\0\1\0\2\20automatic_setup\2\rhandlers\0\nsetup\19mason-nvim-dap\frequire\0" },
+    config = { "\27LJ\2\ng\0\0\5\0\a\0\f6\0\0\0009\0\1\0009\0\2\0'\2\3\0006\3\0\0009\3\1\0039\3\4\3B\3\1\2'\4\5\0&\3\4\3'\4\6\0D\0\4\0\tfile\6/\vgetcwd\25Path to executable: \ninput\afn\bvim∏\3\1\1\a\0\18\0!6\1\0\0006\3\1\0'\4\2\0B\1\3\3\14\0\1\0X\3\1Ä2\0\25Ä9\3\3\0025\4\5\0005\5\6\0005\6\a\0=\6\b\5=\5\t\4=\4\4\0039\3\n\0024\4\3\0005\5\f\0003\6\r\0=\6\14\5>\5\1\4=\4\v\0039\3\n\0029\4\n\0029\4\v\4=\4\15\0036\3\1\0'\5\16\0B\3\2\0029\3\17\3\18\5\0\0B\3\2\1K\0\1\0K\0\1\0\18default_setup\19mason-nvim-dap\6c\fprogram\0\1\0\6\bcwd\23${workspaceFolder}\fprogram\0\frequest\vlaunch\16stopOnEntry\1\tname\16Launch file\ttype\rcodelldb\bcpp\19configurations\15executable\targs\1\3\0\0\v--port\n13777\1\0\2\targs\0\fcommand\rcodelldb\1\0\4\15executable\0\tport\n13777\thost\014127.0.0.1\ttype\vserver\rcodelldb\radapters\bdap\frequire\npcall£\4\1\0\5\0\19\0 6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0024\3\3\0003\4\6\0>\4\1\3=\3\a\2B\0\2\0016\0\b\0009\0\t\0009\0\n\0\18\1\0\0'\3\v\0005\4\f\0B\1\3\1\18\1\0\0'\3\r\0005\4\14\0B\1\3\1\18\1\0\0'\3\15\0005\4\16\0B\1\3\1\18\1\0\0'\3\17\0005\4\18\0B\1\3\1K\0\1\0\1\0\4\vlinehl\19DapStoppedLine\ttext\nÛ∞Åï \vtexthl\19DiagnosticWarn\nnumhl\5\15DapStopped\1\0\4\vlinehl\5\ttext\b‚óÜ\vtexthl\16DapLogPoint\nnumhl\5\16DapLogPoint\1\0\4\vlinehl\5\ttext\b‚óè\vtexthl\27DapBreakpointCondition\nnumhl\5\27DapBreakpointCondition\1\0\4\vlinehl\5\ttext\b‚óè\vtexthl\18DapBreakpoint\nnumhl\5\18DapBreakpoint\16sign_define\afn\bvim\rhandlers\0\21ensure_installed\1\2\0\0\rcodelldb\1\0\3\21ensure_installed\0\20automatic_setup\2\rhandlers\0\nsetup\19mason-nvim-dap\frequire\0" },
     loaded = true,
     path = "/Users/samyak/.local/share/nvim/site/pack/packer/start/mason-nvim-dap.nvim",
     url = "https://github.com/jay-babu/mason-nvim-dap.nvim"
@@ -270,28 +270,28 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: mason-nvim-dap.nvim
-time([[Config for mason-nvim-dap.nvim]], true)
-try_loadstring("\27LJ\2\n¢\3\0\1\n\0\r\0\0266\1\0\0'\3\1\0B\1\2\0029\2\2\0015\3\4\0005\4\5\0=\4\6\3=\3\3\0026\2\a\0005\4\b\0B\2\2\4X\5\5Ä9\a\t\0014\b\3\0005\t\n\0>\t\1\b<\b\6\aE\5\3\3R\5˘\1276\2\0\0'\4\v\0B\2\2\0029\2\f\2\18\4\0\0B\2\2\1K\0\1\0\18default_setup\19mason-nvim-dap\1\0\6\tname\16Launch file\bcwd\23${workspaceFolder}\22runtimeExecutable\tnode\ttype\rpwa-node\frequest\vlaunch\fprogram\f${file}\19configurations\1\3\0\0\15typescript\15javascript\vipairs\15executable\1\0\1\fcommand\21js-debug-adapter\1\0\4\15executable\0\thost\014127.0.0.1\tport\3ª?\ttype\vserver\rpwa-node\radapters\bdap\frequireÎ\3\1\0\5\0\17\0\0306\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\3\0003\4\4\0>\4\1\3=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0\18\1\0\0'\3\t\0005\4\n\0B\1\3\1\18\1\0\0'\3\v\0005\4\f\0B\1\3\1\18\1\0\0'\3\r\0005\4\14\0B\1\3\1\18\1\0\0'\3\15\0005\4\16\0B\1\3\1K\0\1\0\1\0\4\nnumhl\5\ttext\nÛ∞Åï \vlinehl\19DapStoppedLine\vtexthl\19DiagnosticWarn\15DapStopped\1\0\4\nnumhl\5\ttext\b‚óÜ\vlinehl\5\vtexthl\16DapLogPoint\16DapLogPoint\1\0\4\nnumhl\5\ttext\b‚óè\vlinehl\5\vtexthl\27DapBreakpointCondition\27DapBreakpointCondition\1\0\4\nnumhl\5\ttext\b‚óè\vlinehl\5\vtexthl\18DapBreakpoint\18DapBreakpoint\16sign_define\afn\bvim\rhandlers\0\1\0\2\20automatic_setup\2\rhandlers\0\nsetup\19mason-nvim-dap\frequire\0", "config", "mason-nvim-dap.nvim")
-time([[Config for mason-nvim-dap.nvim]], false)
--- Config for: bufferline.nvim
-time([[Config for bufferline.nvim]], true)
-try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\15bufferline\frequire\0", "config", "bufferline.nvim")
-time([[Config for bufferline.nvim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Config for: mason-nvim-dap.nvim
+time([[Config for mason-nvim-dap.nvim]], true)
+try_loadstring("\27LJ\2\ng\0\0\5\0\a\0\f6\0\0\0009\0\1\0009\0\2\0'\2\3\0006\3\0\0009\3\1\0039\3\4\3B\3\1\2'\4\5\0&\3\4\3'\4\6\0D\0\4\0\tfile\6/\vgetcwd\25Path to executable: \ninput\afn\bvim∏\3\1\1\a\0\18\0!6\1\0\0006\3\1\0'\4\2\0B\1\3\3\14\0\1\0X\3\1Ä2\0\25Ä9\3\3\0025\4\5\0005\5\6\0005\6\a\0=\6\b\5=\5\t\4=\4\4\0039\3\n\0024\4\3\0005\5\f\0003\6\r\0=\6\14\5>\5\1\4=\4\v\0039\3\n\0029\4\n\0029\4\v\4=\4\15\0036\3\1\0'\5\16\0B\3\2\0029\3\17\3\18\5\0\0B\3\2\1K\0\1\0K\0\1\0\18default_setup\19mason-nvim-dap\6c\fprogram\0\1\0\6\bcwd\23${workspaceFolder}\fprogram\0\frequest\vlaunch\16stopOnEntry\1\tname\16Launch file\ttype\rcodelldb\bcpp\19configurations\15executable\targs\1\3\0\0\v--port\n13777\1\0\2\targs\0\fcommand\rcodelldb\1\0\4\15executable\0\tport\n13777\thost\014127.0.0.1\ttype\vserver\rcodelldb\radapters\bdap\frequire\npcall£\4\1\0\5\0\19\0 6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0024\3\3\0003\4\6\0>\4\1\3=\3\a\2B\0\2\0016\0\b\0009\0\t\0009\0\n\0\18\1\0\0'\3\v\0005\4\f\0B\1\3\1\18\1\0\0'\3\r\0005\4\14\0B\1\3\1\18\1\0\0'\3\15\0005\4\16\0B\1\3\1\18\1\0\0'\3\17\0005\4\18\0B\1\3\1K\0\1\0\1\0\4\vlinehl\19DapStoppedLine\ttext\nÛ∞Åï \vtexthl\19DiagnosticWarn\nnumhl\5\15DapStopped\1\0\4\vlinehl\5\ttext\b‚óÜ\vtexthl\16DapLogPoint\nnumhl\5\16DapLogPoint\1\0\4\vlinehl\5\ttext\b‚óè\vtexthl\27DapBreakpointCondition\nnumhl\5\27DapBreakpointCondition\1\0\4\vlinehl\5\ttext\b‚óè\vtexthl\18DapBreakpoint\nnumhl\5\18DapBreakpoint\16sign_define\afn\bvim\rhandlers\0\21ensure_installed\1\2\0\0\rcodelldb\1\0\3\21ensure_installed\0\20automatic_setup\2\rhandlers\0\nsetup\19mason-nvim-dap\frequire\0", "config", "mason-nvim-dap.nvim")
+time([[Config for mason-nvim-dap.nvim]], false)
 -- Config for: nvim-dap-ui
 time([[Config for nvim-dap-ui]], true)
 try_loadstring("\27LJ\2\n\30\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\1¿\topen\31\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\1¿\nclose\31\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\1¿\nclose⁄\1\1\0\4\0\14\0\0256\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\1B\2\1\0019\2\4\0009\2\5\0029\2\6\0023\3\b\0=\3\a\0029\2\4\0009\2\t\0029\2\n\0023\3\v\0=\3\a\0029\2\4\0009\2\t\0029\2\f\0023\3\r\0=\3\a\0022\0\0ÄK\0\1\0\0\17event_exited\0\21event_terminated\vbefore\0\17dapui_config\22event_initialized\nafter\14listeners\nsetup\ndapui\bdap\frequire\0", "config", "nvim-dap-ui")
 time([[Config for nvim-dap-ui]], false)
+-- Config for: bufferline.nvim
+time([[Config for bufferline.nvim]], true)
+try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\15bufferline\frequire\0", "config", "bufferline.nvim")
+time([[Config for bufferline.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
-vim.cmd [[ packadd nvim-treesitter ]]
-vim.cmd [[ packadd nvim-ts-autotag ]]
 vim.cmd [[ packadd nvim-lspconfig ]]
 vim.cmd [[ packadd lspsaga.nvim ]]
+vim.cmd [[ packadd nvim-treesitter ]]
+vim.cmd [[ packadd nvim-ts-autotag ]]
 time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
