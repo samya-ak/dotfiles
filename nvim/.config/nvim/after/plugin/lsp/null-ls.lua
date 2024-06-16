@@ -21,7 +21,7 @@ null_ls.setup({
 		formatting.prettier, -- js/ts formatter
 		formatting.stylua, -- lua formatter
 		formatting.gofmt, -- go formatter
-		formatting.astyle, -- c, c++, java, c# etc. formatter
+		formatting.clang_format, -- c, c++ formatter
 		diagnostics.eslint_d.with({
 			-- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
@@ -40,7 +40,7 @@ null_ls.setup({
 				callback = function()
 					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
 					-- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
-					vim.lsp.buf.format({ async = false })
+					vim.lsp.buf.format({ async = false, bufnr = bufnr })
 					-- vim.lsp.buf.format({
 					-- 	filter = function(client)
 					-- 		--  only use null-ls for formatting instead of lsp server

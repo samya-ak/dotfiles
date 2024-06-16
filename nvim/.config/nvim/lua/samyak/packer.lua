@@ -99,4 +99,80 @@ return require("packer").startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
+
+	-- debugger
+	use("mfussenegger/nvim-dap")
+	use({
+		"jay-babu/mason-nvim-dap.nvim",
+		requires = "mfussenegger/nvim-dap",
+		config = function()
+			require("mason-nvim-dap").setup({
+				automatic_setup = true,
+				ensure_installed = { "codelldb" },
+				handlers = {
+					function(config)
+						local status, dap = pcall(require, "dap")
+						if not status then
+							return
+						end
+
+						dap.adapters.codelldb = {
+							type = "server",
+							host = "127.0.0.1",
+							--port = "${port}",
+							port = "13777",
+							executable = {
+								command = "codelldb",
+								args = {
+									"--port",
+									"13777",
+								},
+							},
+						}
+
+						dap.configurations.cpp = {
+							{
+								name = "Launch file",
+								type = "codelldb",
+								request = "launch",
+								program = function()
+									return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+								end,
+								cwd = "${workspaceFolder}",
+								stopOnEntry = false,
+							},
+						}
+
+						dap.configurations.c = dap.configurations.cpp
+						-- Keep original functionality
+						require("mason-nvim-dap").default_setup(config)
+					end,
+				},
+			})
+
+			local sign = vim.fn.sign_define
+			sign("DapBreakpoint", { text = "●", texthl = "DapBreakpoint", linehl = "", numhl = "" })
+			sign("DapBreakpointCondition", { text = "●", texthl = "DapBreakpointCondition", linehl = "", numhl = "" })
+			sign("DapLogPoint", { text = "◆", texthl = "DapLogPoint", linehl = "", numhl = "" })
+			sign("DapStopped", { text = "󰁕 ", texthl = "DiagnosticWarn", linehl = "DapStoppedLine", numhl = "" })
+		end,
+	})
+	use({
+		"rcarriga/nvim-dap-ui",
+		requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+		config = function()
+			local dap = require("dap")
+			local dapui = require("dapui")
+			dapui.setup()
+			dap.listeners.after.event_initialized["dapui_config"] = function()
+				dapui.open()
+			end
+			dap.listeners.before.event_terminated["dapui_config"] = function()
+				dapui.close()
+			end
+			dap.listeners.before.event_exited["dapui_config"] = function()
+				dapui.close()
+			end
+		end,
+	})
 end)

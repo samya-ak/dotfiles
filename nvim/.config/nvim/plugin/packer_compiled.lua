@@ -153,6 +153,12 @@ _G.packer_plugins = {
     path = "/Users/samyak/.local/share/nvim/site/pack/packer/start/mason-null-ls.nvim",
     url = "https://github.com/jayp0521/mason-null-ls.nvim"
   },
+  ["mason-nvim-dap.nvim"] = {
+    config = { "\27LJ\2\n¢\3\0\1\n\0\r\0\0266\1\0\0'\3\1\0B\1\2\0029\2\2\0015\3\4\0005\4\5\0=\4\6\3=\3\3\0026\2\a\0005\4\b\0B\2\2\4X\5\5Ä9\a\t\0014\b\3\0005\t\n\0>\t\1\b<\b\6\aE\5\3\3R\5˘\1276\2\0\0'\4\v\0B\2\2\0029\2\f\2\18\4\0\0B\2\2\1K\0\1\0\18default_setup\19mason-nvim-dap\1\0\6\tname\16Launch file\bcwd\23${workspaceFolder}\22runtimeExecutable\tnode\ttype\rpwa-node\frequest\vlaunch\fprogram\f${file}\19configurations\1\3\0\0\15typescript\15javascript\vipairs\15executable\1\0\1\fcommand\21js-debug-adapter\1\0\4\15executable\0\thost\014127.0.0.1\tport\3ª?\ttype\vserver\rpwa-node\radapters\bdap\frequireÎ\3\1\0\5\0\17\0\0306\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\3\0003\4\4\0>\4\1\3=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0\18\1\0\0'\3\t\0005\4\n\0B\1\3\1\18\1\0\0'\3\v\0005\4\f\0B\1\3\1\18\1\0\0'\3\r\0005\4\14\0B\1\3\1\18\1\0\0'\3\15\0005\4\16\0B\1\3\1K\0\1\0\1\0\4\nnumhl\5\ttext\nÛ∞Åï \vlinehl\19DapStoppedLine\vtexthl\19DiagnosticWarn\15DapStopped\1\0\4\nnumhl\5\ttext\b‚óÜ\vlinehl\5\vtexthl\16DapLogPoint\16DapLogPoint\1\0\4\nnumhl\5\ttext\b‚óè\vlinehl\5\vtexthl\27DapBreakpointCondition\27DapBreakpointCondition\1\0\4\nnumhl\5\ttext\b‚óè\vlinehl\5\vtexthl\18DapBreakpoint\18DapBreakpoint\16sign_define\afn\bvim\rhandlers\0\1\0\2\20automatic_setup\2\rhandlers\0\nsetup\19mason-nvim-dap\frequire\0" },
+    loaded = true,
+    path = "/Users/samyak/.local/share/nvim/site/pack/packer/start/mason-nvim-dap.nvim",
+    url = "https://github.com/jay-babu/mason-nvim-dap.nvim"
+  },
   ["mason.nvim"] = {
     loaded = true,
     path = "/Users/samyak/.local/share/nvim/site/pack/packer/start/mason.nvim",
@@ -173,10 +179,26 @@ _G.packer_plugins = {
     path = "/Users/samyak/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/samyak/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-ui"] = {
+    config = { "\27LJ\2\n\30\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\1¿\topen\31\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\1¿\nclose\31\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\1¿\nclose⁄\1\1\0\4\0\14\0\0256\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\1B\2\1\0019\2\4\0009\2\5\0029\2\6\0023\3\b\0=\3\a\0029\2\4\0009\2\t\0029\2\n\0023\3\v\0=\3\a\0029\2\4\0009\2\t\0029\2\f\0023\3\r\0=\3\a\0022\0\0ÄK\0\1\0\0\17event_exited\0\21event_terminated\vbefore\0\17dapui_config\22event_initialized\nafter\14listeners\nsetup\ndapui\bdap\frequire\0" },
+    loaded = true,
+    path = "/Users/samyak/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/samyak/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-nio"] = {
+    loaded = true,
+    path = "/Users/samyak/.local/share/nvim/site/pack/packer/start/nvim-nio",
+    url = "https://github.com/nvim-neotest/nvim-nio"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -248,14 +270,22 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
-time([[Config for Comment.nvim]], false)
+-- Config for: mason-nvim-dap.nvim
+time([[Config for mason-nvim-dap.nvim]], true)
+try_loadstring("\27LJ\2\n¢\3\0\1\n\0\r\0\0266\1\0\0'\3\1\0B\1\2\0029\2\2\0015\3\4\0005\4\5\0=\4\6\3=\3\3\0026\2\a\0005\4\b\0B\2\2\4X\5\5Ä9\a\t\0014\b\3\0005\t\n\0>\t\1\b<\b\6\aE\5\3\3R\5˘\1276\2\0\0'\4\v\0B\2\2\0029\2\f\2\18\4\0\0B\2\2\1K\0\1\0\18default_setup\19mason-nvim-dap\1\0\6\tname\16Launch file\bcwd\23${workspaceFolder}\22runtimeExecutable\tnode\ttype\rpwa-node\frequest\vlaunch\fprogram\f${file}\19configurations\1\3\0\0\15typescript\15javascript\vipairs\15executable\1\0\1\fcommand\21js-debug-adapter\1\0\4\15executable\0\thost\014127.0.0.1\tport\3ª?\ttype\vserver\rpwa-node\radapters\bdap\frequireÎ\3\1\0\5\0\17\0\0306\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\3\0003\4\4\0>\4\1\3=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0\18\1\0\0'\3\t\0005\4\n\0B\1\3\1\18\1\0\0'\3\v\0005\4\f\0B\1\3\1\18\1\0\0'\3\r\0005\4\14\0B\1\3\1\18\1\0\0'\3\15\0005\4\16\0B\1\3\1K\0\1\0\1\0\4\nnumhl\5\ttext\nÛ∞Åï \vlinehl\19DapStoppedLine\vtexthl\19DiagnosticWarn\15DapStopped\1\0\4\nnumhl\5\ttext\b‚óÜ\vlinehl\5\vtexthl\16DapLogPoint\16DapLogPoint\1\0\4\nnumhl\5\ttext\b‚óè\vlinehl\5\vtexthl\27DapBreakpointCondition\27DapBreakpointCondition\1\0\4\nnumhl\5\ttext\b‚óè\vlinehl\5\vtexthl\18DapBreakpoint\18DapBreakpoint\16sign_define\afn\bvim\rhandlers\0\1\0\2\20automatic_setup\2\rhandlers\0\nsetup\19mason-nvim-dap\frequire\0", "config", "mason-nvim-dap.nvim")
+time([[Config for mason-nvim-dap.nvim]], false)
 -- Config for: bufferline.nvim
 time([[Config for bufferline.nvim]], true)
 try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\15bufferline\frequire\0", "config", "bufferline.nvim")
 time([[Config for bufferline.nvim]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
+-- Config for: nvim-dap-ui
+time([[Config for nvim-dap-ui]], true)
+try_loadstring("\27LJ\2\n\30\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\1¿\topen\31\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\1¿\nclose\31\0\0\2\1\1\0\4-\0\0\0009\0\0\0B\0\1\1K\0\1\0\1¿\nclose⁄\1\1\0\4\0\14\0\0256\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\1B\2\1\0019\2\4\0009\2\5\0029\2\6\0023\3\b\0=\3\a\0029\2\4\0009\2\t\0029\2\n\0023\3\v\0=\3\a\0029\2\4\0009\2\t\0029\2\f\0023\3\r\0=\3\a\0022\0\0ÄK\0\1\0\0\17event_exited\0\21event_terminated\vbefore\0\17dapui_config\22event_initialized\nafter\14listeners\nsetup\ndapui\bdap\frequire\0", "config", "nvim-dap-ui")
+time([[Config for nvim-dap-ui]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]

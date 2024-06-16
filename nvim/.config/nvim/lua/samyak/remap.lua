@@ -65,3 +65,7 @@ keymap("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
 -- clear all opened buffers
 keymap("n", "<leader>q", ":bufdo bwipeout<CR>")
+
+-- dap debugger
+keymap("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>") --  Add breakpoint at line
+keymap("n", "<leader>dr", "<cmd> DapContinue <CR>") --  Start or continue the debugger
