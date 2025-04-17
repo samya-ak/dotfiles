@@ -80,7 +80,7 @@ return require("packer").startup(function(use)
 		requires = {
 			"nvim-tree/nvim-web-devicons", -- for file icons
 		},
-		tag = "nightly",
+		version="*"
 	})
 	use({
 		"nvim-lualine/lualine.nvim",

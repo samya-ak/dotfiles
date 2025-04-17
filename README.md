@@ -1,15 +1,16 @@
 # Using stow to manage dotfiles
 
 ## The Problem
+
 I've got my personal machine and work machine. They both share somewhat same dotfiles - configurations that allow me to programme seamlessly.
 I've put these configurations in a git repo in ad hoc manner. Now when I have to setup my dev environment in new machine, I would clone this config repo
-and manually move each config file to the directory it belongs to. So, there's always two copies of a config file in my machine (one in git repo and another 
+and manually move each config file to the directory it belongs to. So, there's always two copies of a config file in my machine (one in git repo and another
 in directory where it actually supposed to be). And when I need to update a config file, I need to update in two places for a machine. This is painful!
 
 ## The Solution: [Stow](https://github.com/aspiers/stow) :rocket:
 
-> Stow is a symlink farm manager program which takes distinct sets of software and/or data located in separate directories on the filesystem, 
-and makes them all appear to be installed in a single directory tree.
+> Stow is a symlink farm manager program which takes distinct sets of software and/or data located in separate directories on the filesystem,
+> and makes them all appear to be installed in a single directory tree.
 
 You need perl to install stow. You can install perl using [perlbrew](https://perlbrew.pl/Installation.html).
 You can install stow following guidelines from [here](https://github.com/aspiers/stow/blob/master/INSTALL.md) or if you're on mac, you can use homebrew.
@@ -21,8 +22,10 @@ brew install stow # Homebrew Mac
 ```
 
 ## Understanding directory structure
+
 By default, target destination of the stowed files is parent directory of stow directory (current directory by default).
 We can change target destination using following command
+
 ```shell
 stow -t [target/path] [PACKAGE]
 # stow -t ~ zsh

@@ -21,15 +21,15 @@ mason.setup()
 mason_lspconfig.setup({
 	-- list of servers for mason to install
 	ensure_installed = {
-		"tsserver",
+		"typescript"
 		"html",
 		"cssls",
 		"tailwindcss",
 		"lua_ls",
 		"emmet_ls",
-		"gopls",
+		--"gopls",
 		"graphql",
-		"clangd",
+		--"clangd",
 	},
 	-- auto-install configured servers (with lspconfig)
 	automatic_installation = true, -- not the same as ensure_installed
@@ -41,8 +41,8 @@ mason_null_ls.setup({
 		"prettier", -- ts/js formatter
 		"stylua", -- lua formatter
 		"eslint_d", -- ts/js linter
-		"gofumpt",
-		"clang-format", -- c/c++ formatter
+		--"gofumpt",
+		--"clang-format", -- c/c++ formatter
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,
