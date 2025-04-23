@@ -22,6 +22,9 @@ font pango:FiraCode Nerd Font 11
 # enable touchpad tapping
 exec xinput set-prop "MSFT0001:01 04F3:31AD Touchpad" "libinput Tapping Enabled" 1
 
+# set brightness based on time of the day
+exec_always --no-startup-id ~/.config/i3/adjust_brightness.sh
+
 # background
 exec_always feh --bg-scale ~/.config/wall.jpg
 
