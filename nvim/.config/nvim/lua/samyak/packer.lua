@@ -80,7 +80,7 @@ return require("packer").startup(function(use)
 		requires = {
 			"nvim-tree/nvim-web-devicons", -- for file icons
 		},
-		version="*"
+		version = "*",
 	})
 	use({
 		"nvim-lualine/lualine.nvim",
@@ -102,6 +102,12 @@ return require("packer").startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
+
+	-- Ruby-specific
+	use("vim-ruby/vim-ruby") -- Ruby syntax and indentation
+	use("tpope/vim-rails") -- Rails helpers
+	use("tpope/vim-endwise") -- auto add `end`
+	use("tpope/vim-bundler") -- bundler helpers
 
 	-- debugger
 	use("mfussenegger/nvim-dap")

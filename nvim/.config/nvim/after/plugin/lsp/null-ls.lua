@@ -22,6 +22,8 @@ null_ls.setup({
 		formatting.stylua, -- lua formatter
 		formatting.gofmt, -- go formatter
 		formatting.clang_format, -- c, c++ formatter
+		formatting.rubocop, -- Ruby formatter
+		diagnostics.rubocop, -- Ruby linter (optional)
 		diagnostics.eslint_d.with({
 			-- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)

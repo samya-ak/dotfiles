@@ -144,3 +144,21 @@ lspconfig["clangd"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
+
+lspconfig["solargraph"].setup({
+	cmd = { "bundle", "exec", "solargraph", "stdio" },
+	on_attach = on_attach,
+	capabilities = capabilities,
+	settings = {
+		solargraph = {
+			diagnostics = true,
+			autoformat = false,
+			completion = true,
+			folding = true,
+			references = true,
+			rename = true,
+			symbols = true,
+			hover = true,
+		},
+	},
+})

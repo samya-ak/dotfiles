@@ -33,6 +33,7 @@ treesitter.setup({
 		"dockerfile",
 		"gitignore",
 		"cpp",
+		"ruby",
 	},
 	-- auto install above language parsers
 	auto_install = true,
