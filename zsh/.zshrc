@@ -129,3 +129,4 @@ FPATH=~/.rbenv/completions:"$FPATH"
 autoload -U compinit
 compinit
 
+alias sleep='systemctl suspend'
