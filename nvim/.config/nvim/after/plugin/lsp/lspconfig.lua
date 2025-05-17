@@ -10,12 +10,6 @@ if not cmp_nvim_lsp_status then
 	return
 end
 
--- import typescript plugin safely
-local typescript_setup, typescript = pcall(require, "ts_ls")
-if not typescript_setup then
-	return
-end
-
 local keymap = vim.keymap -- for conciseness
 
 -- enable keybinds only for when lsp server available
@@ -70,7 +64,7 @@ lspconfig["html"].setup({
 })
 
 -- configure typescript server with plugin
-typescript.setup({
+lspconfig.ts_ls.setup({
 	server = {
 		capabilities = capabilities,
 		on_attach = on_attach,
@@ -83,7 +77,7 @@ lspconfig["cssls"].setup({
 	on_attach = on_attach,
 })
 
--- configure tailwindcss server
+-- configure tailwinnpm install -g @angular/language-serverdcss server
 lspconfig["tailwindcss"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
@@ -160,5 +154,18 @@ lspconfig["solargraph"].setup({
 			symbols = true,
 			hover = true,
 		},
+	},
+})
+
+lspconfig["angularls"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	cmd = {
+		"ngserver",
+		"--stdio",
+		"--tsProbeLocations",
+		"./node_modules",
+		"--ngProbeLocations",
+		"./node_modules",
 	},
 })

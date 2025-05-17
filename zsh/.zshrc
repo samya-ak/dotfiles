@@ -133,3 +133,14 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
 
 alias sleep='systemctl suspend'
+alias dcd='docker compose -f dcd.yml' 
+alias dct='docker compose -f dct.yml'
+export MOZ_X11_EGL=1
+
+
+. "$HOME/.local/share/../bin/env"
+eval "$(dip console)"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
