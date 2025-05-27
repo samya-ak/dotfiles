@@ -57,6 +57,12 @@ keymap("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
 keymap("n", "<leader>sx", ":close<CR>") -- close current split window
+-- Resize window height
+keymap("n", "<A-k>", ":resize +2<CR>", { desc = "Increase height" })
+keymap("n", "<A-j>", ":resize -2<CR>", { desc = "Decrease height" })
+-- Resize window width
+keymap("n", "<A-l>", ":vertical resize +4<CR>", { desc = "Increase width" })
+keymap("n", "<A-h>", ":vertical resize -4<CR>", { desc = "Decrease width" })
 
 keymap("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap("n", "<leader>tx", ":tabclose<CR>") -- close current tab
@@ -69,6 +75,8 @@ keymap("n", "<leader>q", ":bufdo bwipeout<CR>")
 -- dap debugger
 keymap("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>") --  Add breakpoint at line
 keymap("n", "<leader>dr", "<cmd> DapContinue <CR>") --  Start or continue the debugger
+
+-- Use ctags
 keymap("n", "<C-]>", function()
 	vim.cmd("tjump " .. vim.fn.expand("<cword>"))
 end, { desc = "Go to tag" })

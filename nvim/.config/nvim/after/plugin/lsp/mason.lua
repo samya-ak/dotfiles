@@ -30,7 +30,6 @@ mason_lspconfig.setup({
 		--"gopls",
 		"graphql",
 		--"clangd",
-		"solargraph",
 		"angularls",
 	},
 	-- auto-install configured servers (with lspconfig)

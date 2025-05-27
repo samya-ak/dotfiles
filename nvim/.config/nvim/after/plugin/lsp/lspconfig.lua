@@ -10,6 +10,8 @@ if not cmp_nvim_lsp_status then
 	return
 end
 
+local configs = require("lspconfig.configs")
+
 local keymap = vim.keymap -- for conciseness
 
 -- enable keybinds only for when lsp server available
@@ -38,6 +40,10 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
 	keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
 	keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", opts) -- see outline on right hand side
+	keymap.set("n", "<space>f", function()
+		vim.lsp.buf.format({ async = true })
+	end, opts)
+	keymap.set("n", "gr", vim.lsp.buf.references, opts)
 
 	-- typescript specific keymaps (e.g. rename file and update imports)
 	if client.name == "tsserver" then
@@ -139,22 +145,61 @@ lspconfig["clangd"].setup({
 	capabilities = capabilities,
 })
 
-lspconfig["solargraph"].setup({
-	cmd = { "bundle", "exec", "solargraph", "stdio" },
+-- lspconfig["solargraph"].setup({
+-- 	cmd = { "bundle", "exec", "solargraph", "stdio" },
+-- 	on_attach = on_attach,
+-- 	capabilities = capabilities,
+-- 	settings = {
+-- 		solargraph = {
+-- 			diagnostics = true,
+-- 			autoformat = false,
+-- 			completion = true,
+-- 			folding = true,
+-- 			references = true,
+-- 			rename = true,
+-- 			symbols = true,
+-- 			hover = true,
+-- 		},
+-- 	},
+-- })
+
+lspconfig.ruby_lsp.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-	settings = {
-		solargraph = {
-			diagnostics = true,
-			autoformat = false,
-			completion = true,
-			folding = true,
-			references = true,
-			rename = true,
-			symbols = true,
-			hover = true,
+	init_options = {
+		formatter = "standard",
+		linters = { "standard" },
+		addonSettings = {
+			["Ruby LSP Rails"] = {
+				enablePendingMigrationsPrompt = false,
+			},
 		},
 	},
+})
+
+if not configs.fuzzy_ls then
+	configs.fuzzy_ls = {
+		default_config = {
+			cmd = { "fuzzy" },
+			filetypes = { "ruby" },
+			root_dir = function(fname)
+				return lspconfig.util.find_git_ancestor(fname)
+			end,
+			settings = {},
+			init_options = {
+				allocationType = "ram",
+				indexGems = true,
+				reportDiagnostics = true,
+			},
+		},
+	}
+end
+
+-- Copy the binary for respective machine from https://github.com/doompling/fuzzy_ruby_server/tree/master/bin
+-- Make it executable, rename it to "fuzzy"
+-- Move it to location in PATH eg: /local/bin
+lspconfig.fuzzy_ls.setup({
+	on_attach = on_attach,
 })
 
 lspconfig["angularls"].setup({
