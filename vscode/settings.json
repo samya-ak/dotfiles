@@ -1,16 +1,36 @@
 {
-  "workbench.editor.showTabs": true,
-  "workbench.list.automaticKeyboardNavigation": false,
-  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
-  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-  "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.config/nvim/init.vim",
-  "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
-  "whichkey.sortOrder": "alphabetically",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "editor.rulers": [80],
+  "editor.scrollBeyondLastLine": false,
+  "editor.scrollBeyondLastColumn": 8,
+  "search.showLineNumbers": true,
+  "editor.find.seedSearchStringFromSelection": "always",
+  "editor.find.autoFindInSelection": "never",
+  "editor.renderWhitespace": "none",
+  "editor.guides.indentation": true,
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.smoothScrolling": false,
+  "editor.cursorSmoothCaretAnimation": "off",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "never"
+  },
+  "eslint.validate": ["javascript", "typescript"],
   "whichkey.bindings": [
     {
       "key": ";",
       "name": "commands",
       "type": "command",
+
       "command": "workbench.action.showCommands"
     },
     {
@@ -213,20 +233,37 @@
       "bindings": [
         {
           "key": "f",
-          "name": "File",
+          "name": "Find files (Telescope)",
           "type": "command",
-          "command": "editor.action.startFindReplaceAction"
+          "command": "workbench.action.quickOpen"
         },
         {
           "key": "s",
-          "name": "Symbol",
+          "name": "Search text (Live grep)",
           "type": "command",
-          "command": "editor.action.rename",
-          "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+          "command": "workbench.action.findInFiles"
         },
         {
-          "key": "p",
-          "name": "Project",
+          "key": "c",
+          "name": "Find word under cursor",
+          "type": "command",
+          "command": "editor.action.addSelectionToNextFindMatch"
+        },
+        {
+          "key": "b",
+          "name": "Find buffers",
+          "type": "command",
+          "command": "workbench.action.showAllEditors"
+        },
+        {
+          "key": "h",
+          "name": "Help tags",
+          "type": "command",
+          "command": "workbench.action.showCommands"
+        },
+        {
+          "key": "r",
+          "name": "Replace in files",
           "type": "command",
           "command": "workbench.action.replaceInFiles"
         }
@@ -360,6 +397,36 @@
           "name": "text",
           "type": "command",
           "command": "workbench.action.findInFiles"
+        },
+        {
+          "key": "v",
+          "name": "Split window vertically",
+          "type": "command",
+          "command": "workbench.action.splitEditor"
+        },
+        {
+          "key": "h",
+          "name": "Split window horizontally",
+          "type": "command",
+          "command": "workbench.action.splitEditorDown"
+        },
+        {
+          "key": "e",
+          "name": "Make split windows equal",
+          "type": "command",
+          "command": "workbench.action.evenEditorWidths"
+        },
+        {
+          "key": "x",
+          "name": "Close current split window",
+          "type": "command",
+          "command": "workbench.action.closeActiveEditor"
+        },
+        {
+          "key": "r",
+          "name": "Search and replace word under cursor",
+          "type": "command",
+          "command": "editor.action.changeAll"
         }
       ]
     },
@@ -585,7 +652,6 @@
   "terminal.explorerKind": "external",
   "workbench.iconTheme": "vscode-icons",
   "editor.fontFamily": "Jetbrains Mono",
-  "terminal.integrated.lineHeight": 1.3,
   "explorer.confirmDelete": false,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -598,7 +664,7 @@
   "[go]": {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     }
   },
   "go.docsTool": "gogetdoc",
@@ -611,7 +677,6 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "editor.cursorStyle": "line",
   "editor.lineNumbers": "relative",
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.wordWrap": "off",
@@ -623,7 +688,8 @@
     "jupyter-notebook": "left"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true
   },
   "go.toolsManagement.autoUpdate": true,
   "java.help.firstView": "gettingStarted",
@@ -636,7 +702,7 @@
     "**/.factorypath": true
   },
   "files.insertFinalNewline": true,
-  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "workbench.colorTheme": "One Dark Pro",
   "bracketPairColorizer.depreciation-notice": false,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -646,16 +712,236 @@
   },
   "editor.tabSize": 2,
   "editor.insertSpaces": false,
+  "editor.detectIndentation": false,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "gslang.author": "samyakmaharjan",
   "[gs]": {
-    "editor.defaultFormatter": "shenyq.gs-lang"
+    "editor.defaultFormatter": null
   },
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.minimap.enabled": false,
+  "editor.fontSize": 14,
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.fontSize": 13,
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+  },
+  "window.zoomLevel": -1,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  // Vim configuration to match Neovim settings
+  "vim.leader": " ",
+  "vim.useCtrlKeys": true,
+
+  // Fix tab functionality
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-p>": false,
+    "<Tab>": false,
+    "<S-Tab>": false,
+    "<C-t>": false,
+    "<C-d>": true
+  },
+
+  // Cursor configuration for consistent visual feedback
+  "vim.cursorStylePerMode": {
+    "normal": "block",
+    "insert": "line",
+    "visual": "block",
+    "visualline": "block",
+    "visualblock": "block",
+    "replace": "underline"
+  },
+
+  "vim.hlsearch": false,
+  "vim.incsearch": true,
+  "vim.smartcase": true,
+  "vim.ignorecase": true,
+  "vim.scrolloff": 8,
+  "vim.sidescrolloff": 8,
+  "vim.textwidth": 80,
+  "vim.wrap": false,
+  "vim.whichwrap": "",
+  "vim.startofline": false,
+  "vim.showcmd": true,
+  "vim.showmode": false,
+  "vim.cursorline": true,
+
+  // Additional vim normal mode key bindings to match Neovim config
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "p", "v"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "f", "s"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<leader>", "f", "b"],
+      "commands": ["workbench.action.showAllEditors"]
+    },
+    {
+      "before": ["<leader>", "s", "v"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["<leader>", "s", "h"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["<leader>", "s", "e"],
+      "commands": ["workbench.action.evenEditorWidths"]
+    },
+    {
+      "before": ["<leader>", "s", "x"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "y"],
+      "commands": ["editor.action.clipboardCopyAction"]
+    },
+    {
+      "before": ["<leader>", "Y"],
+      "commands": ["editor.action.clipboardCopyAction"]
+    },
+    {
+      "before": ["<C-h>"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["<C-j>"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["<C-l>"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    {
+      "before": ["<C-d>"],
+      "after": ["<C-d>", "z", "z"]
+    },
+    {
+      "before": ["<C-u>"],
+      "after": ["<C-u>", "z", "z"]
+    },
+    {
+      "before": ["n"],
+      "after": ["n", "z", "z", "z", "v"]
+    },
+    {
+      "before": ["N"],
+      "after": ["N", "z", "z", "z", "v"]
+    },
+    {
+      "before": ["J"],
+      "after": ["m", "z", "J", "`", "z"]
+    },
+    {
+      "before": ["x"],
+      "after": ["\"", "_", "x"]
+    },
+    {
+      "before": ["<C-p>"],
+      "commands": ["workbench.action.quickOpen"]
+    }
+  ],
+
+  // Visual mode key bindings to match Neovim config
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Esc>"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    {
+      "before": ["<leader>", "y"],
+      "commands": ["editor.action.clipboardCopyAction"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "after": ["\"", "_", "d", "P"]
+    }
+  ],
+  "editor.cursorSurroundingLines": 8,
+
+  // Additional settings to match Neovim behavior
+  "vscode-neovim.neovimClean": true,
+  "vscode-neovim.useWSL": false,
+  "vscode-neovim.logLevel": "warn",
+  "vscode-neovim.highlightGroups.highlights": {
+    "IncSearch": {
+      "backgroundColor": "#e06c75",
+      "color": "#282c34"
+    },
+    "Search": {
+      "backgroundColor": "#61afef",
+      "color": "#282c34"
+    }
+  },
+  // Match Neovim's undofile and backup settings
+  "files.autoSave": "off",
+  "files.hotExit": "onExitAndWindowClose",
+  // Match Neovim's updatetime setting (50ms)
+  "editor.quickSuggestionsDelay": 50,
+  "editor.parameterHints.cycle": true,
+  // Match Neovim's signcolumn = "yes"
+  "editor.glyphMargin": true,
+  "scm.diffDecorations": "gutter",
+  "git.decorations.enabled": true,
+  // Match Neovim's termguicolors
+  "terminal.integrated.gpuAcceleration": "on",
+
+  // Improve Cursor Visibility
+ "editor.cursorBlinking": "solid",
+"editor.renderLineHighlight": "all",
+
+// Optional Visual Enhancements
+"editor.stickyScroll.enabled": true,
+
+// Vim-like clipboard
+"vim.useSystemClipboard": true,
+
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+	},
+	"editor.tabCompletion": "on"
 }
